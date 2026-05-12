@@ -60,6 +60,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .task-name-wrap{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
 .task-name-span{font-size:13px;color:#1d1d1f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
 .task-name-span.done-txt{color:#aaa;text-decoration:line-through}
+.row-drag-handle{cursor:grab;color:#c7c7cc;font-size:13px;padding:0 4px 0 0;flex-shrink:0;opacity:0;transition:opacity .15s;user-select:none}
+.task-row:hover .row-drag-handle{opacity:1}
+.task-row.drag-over-top{border-top:2px solid #0071e3}
+.task-row.drag-over-bot{border-bottom:2px solid #0071e3}
+.panel-task-name-inp{font-size:15px;font-weight:700;color:#1d1d1f;padding-right:38px;line-height:1.3;margin-bottom:12px;width:100%;border:none;outline:none;border-bottom:2px solid #0071e3;background:transparent;font-family:inherit;padding-bottom:2px}
 .edit-name-btn{background:none;border:none;cursor:pointer;padding:3px;border-radius:4px;font-size:11px;color:#86868b;opacity:0;transition:opacity .15s,background .15s;flex-shrink:0;line-height:1}
 .edit-name-btn:hover{background:rgba(0,0,0,.07);color:#1d1d1f}
 .task-row:hover .edit-name-btn{opacity:1}
@@ -539,7 +544,54 @@ function getSorted(a){
 
 function renderBody(a){
   var tb=document.getElementById('tb-'+a.id);
-  if(tb) tb.innerHTML=getSorted(a).map(function(t){ return taskHTML(a.id,t); }).join('');
+  if(!tb) return;
+  tb.innerHTML=getSorted(a).map(function(t){ return taskHTML(a.id,t); }).join('');
+  // wire up row drag-to-reorder (only when not sorted)
+  var rows=tb.querySelectorAll('.task-row');
+  var rowDragId=null;
+  rows.forEach(function(row){
+    var tId=row.id.replace('row-','');
+    row.draggable=true;
+    row.addEventListener('dragstart',function(e){
+      if(a.sc) return; // disable row drag when a sort is active
+      rowDragId=tId;
+      e.dataTransfer.effectAllowed='move';
+      setTimeout(function(){ row.style.opacity='.4'; },0);
+    });
+    row.addEventListener('dragend',function(){
+      row.style.opacity='';
+      tb.querySelectorAll('.task-row').forEach(function(r){ r.classList.remove('drag-over-top','drag-over-bot'); });
+      rowDragId=null;
+    });
+    row.addEventListener('dragover',function(e){
+      if(!rowDragId||rowDragId===tId) return;
+      e.preventDefault();
+      var rect=row.getBoundingClientRect();
+      var mid=rect.top+rect.height/2;
+      row.classList.remove('drag-over-top','drag-over-bot');
+      row.classList.add(e.clientY<mid?'drag-over-top':'drag-over-bot');
+    });
+    row.addEventListener('dragleave',function(){
+      row.classList.remove('drag-over-top','drag-over-bot');
+    });
+    row.addEventListener('drop',function(e){
+      e.preventDefault(); e.stopPropagation();
+      row.classList.remove('drag-over-top','drag-over-bot');
+      if(!rowDragId||rowDragId===tId) return;
+      var fromIdx=a.tasks.findIndex(function(t){return t.id===rowDragId;});
+      var toIdx  =a.tasks.findIndex(function(t){return t.id===tId;});
+      if(fromIdx<0||toIdx<0) return;
+      var rect=row.getBoundingClientRect();
+      var mid=rect.top+rect.height/2;
+      var insertAfter=(e.clientY>=mid);
+      var moved=a.tasks.splice(fromIdx,1)[0];
+      var newTo=a.tasks.findIndex(function(t){return t.id===tId;});
+      a.tasks.splice(insertAfter?newTo+1:newTo,0,moved);
+      a.sc=null; // clear sort so custom order is preserved
+      renderBody(a);
+      buildHeaders(a);
+    });
+  });
 }
 
 // ── Area interactions ─────────────────────────────────────────────────────────
@@ -626,7 +678,35 @@ function addTask(aId){
   var tb=document.getElementById('tb-'+aId);
   if(tb) tb.insertAdjacentHTML('beforeend',taskHTML(aId,t));
   updateProgress(aId); updateStats();
-  setTimeout(function(){ var row=document.getElementById('row-'+t.id); if(row) row.click(); },60);
+  // open panel then immediately put title into edit mode
+  setTimeout(function(){
+    openPanel(aId, t.id);
+    setTimeout(function(){
+      var nameEl = document.getElementById('panel-task-name');
+      if(!nameEl) return;
+      var inp = document.createElement('input');
+      inp.className = 'panel-task-name-inp';
+      inp.value = t.name;
+      nameEl.replaceWith(inp);
+      inp.focus(); inp.select();
+      function commitPanelName(){
+        var val = inp.value.trim() || 'New task';
+        t.name = val;
+        var newEl = document.createElement('div');
+        newEl.id = 'panel-task-name';
+        newEl.className = 'panel-task-name';
+        newEl.textContent = val;
+        inp.replaceWith(newEl);
+        refreshRow(aId, t.id);
+      }
+      inp.addEventListener('blur', commitPanelName);
+      inp.addEventListener('keydown', function(e){
+        if(e.key==='Enter')  inp.blur();
+        if(e.key==='Escape'){ inp.value=t.name; inp.blur(); }
+        e.stopPropagation();
+      });
+    }, 280); // wait for panel slide-in
+  }, 60);
 }
 function delTask(aId,tId){
   var a=getArea(aId); if(!a) return;
