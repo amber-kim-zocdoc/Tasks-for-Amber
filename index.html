@@ -57,8 +57,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .chkbox:hover{border-color:#0071e3}
 .chkbox.done{background:#30a46c;border-color:#30a46c}
 .chkbox.done::after{content:'✓';font-size:9px;color:#fff;font-weight:700}
+.task-name-wrap{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
 .task-name-span{font-size:13px;color:#1d1d1f;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
 .task-name-span.done-txt{color:#aaa;text-decoration:line-through}
+.edit-name-btn{background:none;border:none;cursor:pointer;padding:3px;border-radius:4px;font-size:11px;color:#86868b;opacity:0;transition:opacity .15s,background .15s;flex-shrink:0;line-height:1}
+.edit-name-btn:hover{background:rgba(0,0,0,.07);color:#1d1d1f}
+.task-row:hover .edit-name-btn{opacity:1}
+.task-name-edit-inp{font-size:13px;font-family:inherit;color:#1d1d1f;border:none;outline:none;background:rgba(0,113,227,.06);box-shadow:0 0 0 2px rgba(0,113,227,.25);border-radius:5px;padding:2px 6px;flex:1;min-width:0;width:100%}
 .sbadge{display:inline-flex;align-items:center;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:600;white-space:nowrap;cursor:pointer;transition:opacity .15s}
 .sbadge:hover{opacity:.75}
 .s-ns{background:rgba(0,0,0,.06);color:#6e6e73}
@@ -510,7 +515,7 @@ function taskHTML(aId, t){
   var platBadges=''; for(var i=0;i<plats.length;i++) platBadges+='<span class="platbadge">'+esc(plats[i])+'</span>';
   var dc=dueCls(t.due, t.status);
   var cells={};
-  cells['name']     = '<div class="task-cell"><div class="chkbox'+(isDone?' done':'')+'" onclick="event.stopPropagation();toggleDone(\''+aId+'\',\''+t.id+'\')"></div><span class="task-name-span'+(isDone?' done-txt':'')+'">'+esc(t.name)+'</span></div>';
+  cells['name']     = '<div class="task-cell"><div class="chkbox'+(isDone?' done':'')+'" onclick="event.stopPropagation();toggleDone(\''+aId+'\',\''+t.id+'\')"></div><div class="task-name-wrap"><span class="task-name-span'+(isDone?' done-txt':'')+'">'+esc(t.name)+'</span><button class="edit-name-btn" title="Edit task name" onclick="event.stopPropagation();startEditName(\''+aId+'\',\''+t.id+'\',this)">✏️</button></div></div>';
   cells['status']   = '<span class="sbadge '+sCls(t.status)+'" onclick="event.stopPropagation();statusDD(\''+aId+'\',\''+t.id+'\',this)">'+esc(t.status)+'</span>';
   cells['priority'] = '<span class="pbadge '+pCls(t.priority)+'" onclick="event.stopPropagation();priorityDD(\''+aId+'\',\''+t.id+'\',this)">'+pIcon(t.priority)+' '+esc(t.priority)+'</span>';
   cells['platform'] = '<div class="plat-multi" onclick="event.stopPropagation();platformDD(\''+aId+'\',\''+t.id+'\',this)">'+platBadges+'</div>';
@@ -781,6 +786,34 @@ function submitComment(aId,tId){
   t.comments.push({id:uid(),author:name,text:text,ts:new Date().toISOString()});
   renderPanel(aId,tId);
   setTimeout(function(){ var inp=document.getElementById('c-text-inp'); if(inp) inp.focus(); },50);
+}
+
+// ── Inline task name editing ──────────────────────────────────────────────────
+function startEditName(aId, tId, btn) {
+  var t = getTask(aId, tId); if(!t) return;
+  var wrap = btn.parentNode;
+  var span = wrap.querySelector('.task-name-span');
+  if(!span) return;
+  // swap span + button for an input
+  var inp = document.createElement('input');
+  inp.className = 'task-name-edit-inp';
+  inp.value = t.name;
+  wrap.innerHTML = '';
+  wrap.appendChild(inp);
+  inp.focus(); inp.select();
+  function commit() {
+    var val = inp.value.trim() || t.name;
+    t.name = val;
+    if(curTaskId === tId) document.getElementById('panel-task-name').textContent = val;
+    refreshRow(aId, tId);
+  }
+  inp.addEventListener('blur', commit);
+  inp.addEventListener('keydown', function(e) {
+    if(e.key === 'Enter')  { inp.blur(); }
+    if(e.key === 'Escape') { inp.value = t.name; inp.blur(); }
+    e.stopPropagation();
+  });
+  inp.addEventListener('click', function(e){ e.stopPropagation(); });
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
