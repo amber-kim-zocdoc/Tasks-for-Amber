@@ -440,6 +440,19 @@
               "ts": "2026-05-12T18:34:04.445Z"
             }
           ]
+        },
+        {
+          "id": "_wekabue",
+          "name": "Market Intelligence / DAG updates",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "Map out ideal journeys and experiences when Market Intelligence is applied to DAGs",
+          "history": [],
+          "comments": []
         }
       ]
     },
@@ -511,7 +524,7 @@
       "color": "#64748b",
       "open": true,
       "title": "Backlog",
-      "subtitle": "Click to edit subtitle",
+      "subtitle": "To-do's that's not on the radar yet",
       "sc": "name",
       "sd": -1,
       "tasks": [
