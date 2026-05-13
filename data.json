@@ -1,355 +1,496 @@
 {
   "areas": [
     {
-      "id": "_4cxxpki",
+      "id": "_iz5umsy",
       "color": "#0071e3",
       "open": true,
-      "title": "SERP & Chat UI",
-      "subtitle": "Scroll behavior, chat input, and doctor card spacing",
-      "sc": null,
+      "title": "Alpha Iterations",
+      "subtitle": "Rapid updates; QA; unblock eng",
+      "sc": "status",
       "sd": 1,
       "tasks": [
         {
-          "id": "_whx8rjo",
-          "name": "Refine scroll behavior on AI SERP page",
-          "status": "In Progress",
-          "priority": "High",
-          "platforms": [
-            "Web"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_a8a69a9",
-          "name": "Update chat input design for natural language prompts",
-          "status": "In Progress",
-          "priority": "High",
-          "platforms": [
-            "Web"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_8fim1cc",
-          "name": "Adjust doctor card spacing and layout",
-          "status": "Done",
-          "priority": "High",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_6mh2ue8",
-          "name": "Audit carousel across devices",
+          "id": "_etztrpk",
+          "name": "Chat scrolling behavior updates [web]",
           "status": "QA",
-          "priority": "Medium",
+          "priority": "High",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "status",
+              "from": "In Progress",
+              "to": "QA",
+              "ts": "2026-05-12T18:32:19.552Z"
+            }
+          ],
+          "platform": "Web",
           "platforms": [
-            "Web",
+            "Web"
+          ]
+        },
+        {
+          "id": "_8b76udb",
+          "name": "Refinement chips carousel auto-scrolling and hover buttons [web]",
+          "status": "QA",
+          "priority": "High",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "status",
+              "from": "In Progress",
+              "to": "QA",
+              "ts": "2026-05-12T18:32:15.410Z"
+            }
+          ],
+          "platform": "Web",
+          "platforms": [
+            "Web"
+          ]
+        },
+        {
+          "id": "_gy3h9xu",
+          "name": "Update BCBS insurance logos",
+          "status": "Not Started",
+          "priority": "Low",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "High",
+              "to": "Low",
+              "ts": "2026-05-12T18:31:48.456Z"
+            }
+          ]
+        },
+        {
+          "id": "_mbnz9do",
+          "name": "Search bar & entry points UI updates",
+          "status": "QA",
+          "priority": "High",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "status",
+              "from": "Review",
+              "to": "QA",
+              "ts": "2026-05-12T18:32:05.626Z"
+            },
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "High",
+              "ts": "2026-05-12T18:32:03.283Z"
+            }
+          ],
+          "platform": "Web",
+          "platforms": [
+            "Web"
+          ]
+        },
+        {
+          "id": "_v6goe3e",
+          "name": "0 map state for availability filter",
+          "status": "In Progress",
+          "priority": "High",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "High",
+              "ts": "2026-05-12T18:32:26.034Z"
+            },
+            {
+              "id": "_ku09yye",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-12T19:23:58.416Z"
+            }
+          ],
+          "platforms": [
             "iOS",
             "Android"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
+          ]
         },
         {
-          "id": "_shvlxnw",
-          "name": "Fix scroll container overflow on mobile web",
-          "status": "Not Started",
-          "priority": "Medium",
+          "id": "_2g4nlkv",
+          "name": "Voice dictation & insurance intercept [web]",
+          "status": "QA",
+          "priority": "High",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "High",
+              "ts": "2026-05-12T18:31:43.525Z"
+            },
+            {
+              "field": "status",
+              "from": "In Dev",
+              "to": "QA",
+              "ts": "2026-05-12T18:31:41.604Z"
+            },
+            {
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Dev",
+              "ts": "2026-05-12T18:31:13.275Z"
+            }
+          ],
+          "platform": "Web",
           "platforms": [
             "Web"
+          ]
+        },
+        {
+          "id": "_omoxye3",
+          "name": "Test Anupam's internal Market Intelligence build",
+          "status": "Not Started",
+          "priority": "High",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "High",
+              "ts": "2026-05-12T18:31:50.184Z"
+            }
+          ],
+          "platform": "Web",
+          "platforms": [
+            "Web"
+          ]
+        },
+        {
+          "id": "_dn3azmy",
+          "name": "Refreshed doctor card snippets & design",
+          "status": "Not Started",
+          "priority": "Medium",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "id": "_d50mcw3",
+              "field": "priority",
+              "from": "Medium",
+              "to": "High",
+              "ts": "2026-05-12T19:24:07.912Z"
+            },
+            {
+              "id": "_ih9jkyf",
+              "field": "priority",
+              "from": "High",
+              "to": "Medium",
+              "ts": "2026-05-12T19:24:12.327Z"
+            }
+          ]
+        },
+        {
+          "id": "_qrid8cq",
+          "name": "App disclaimer deeplinks",
+          "status": "Not Started",
+          "priority": "Low",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:32:23.736Z"
+            }
+          ],
+          "platforms": [
+            "iOS",
+            "Android"
+          ]
+        },
+        {
+          "id": "_m88osar",
+          "name": "Voice dictation and insurance intercept [apps]",
+          "status": "Not Started",
+          "priority": "Low",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:30:37.619Z"
+            }
+          ],
+          "platform": "iOS",
+          "platforms": [
+            "iOS",
+            "Android"
+          ]
+        },
+        {
+          "id": "_eitaabe",
+          "name": "Chat scrolling behavior updates [apps]",
+          "status": "In Progress",
+          "priority": "Medium",
+          "notes": "Need to create ticket",
+          "due": "",
+          "history": [
+            {
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-12T18:33:07.644Z"
+            }
+          ],
+          "platforms": [
+            "iOS",
+            "Android"
+          ]
+        },
+        {
+          "id": "_txgeuk0",
+          "name": "Refinement chips carousel auto-scrolling [apps]",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
           ],
           "due": "",
-          "notes": "",
+          "notes": "Need to create annotations and ticket",
           "history": [],
           "comments": []
         }
       ]
     },
     {
-      "id": "_nwydn06",
+      "id": "_jtsz2pe",
       "color": "#30a46c",
       "open": true,
-      "title": "AI Search Results Page Redesign",
-      "subtitle": "Carousels of cross-listed providers and new layout system",
-      "sc": null,
+      "title": "Vision Explorations",
+      "subtitle": "H2 & beyond design ideation",
+      "sc": "status",
       "sd": 1,
       "tasks": [
         {
-          "id": "_vrv0pez",
-          "name": "Design cross-listed provider carousel component",
+          "id": "_lkk408t",
+          "name": "mWeb chat drawer - smart intercepts",
           "status": "In Progress",
-          "priority": "High",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
+          "priority": "Low",
           "notes": "",
-          "history": [],
-          "comments": []
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "High",
+              "to": "Low",
+              "ts": "2026-05-12T18:33:49.336Z"
+            }
+          ]
         },
         {
-          "id": "_1aif12h",
-          "name": "Define carousel interaction patterns",
+          "id": "_ygj57a4",
+          "name": "Tiered X-listing system - High & low supply, SERP layouts & carousels",
           "status": "In Progress",
-          "priority": "High",
-          "platforms": [
-            "Web",
-            "iOS"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_34ax56p",
-          "name": "Explore layout options for multi-specialty SERP view",
-          "status": "Not Started",
           "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
           "notes": "",
-          "history": [],
-          "comments": []
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Low",
+              "to": "Medium",
+              "ts": "2026-05-12T18:33:52.951Z"
+            },
+            {
+              "field": "priority",
+              "from": "High",
+              "to": "Low",
+              "ts": "2026-05-12T18:33:43.838Z"
+            }
+          ]
         },
         {
-          "id": "_0dff6q9",
-          "name": "Validate design with engineering on feasibility",
+          "id": "_jp0df7f",
+          "name": "Search bar placeholder examples - typewriter animation",
           "status": "Not Started",
+          "priority": "Low",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:33:46.796Z"
+            }
+          ]
+        },
+        {
+          "id": "_n1g2eq4",
+          "name": "Enriched chat content per procedure/specialty",
+          "status": "Not Started",
+          "priority": "Low",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:33:58.115Z"
+            }
+          ]
+        },
+        {
+          "id": "_5egffrv",
+          "name": "X-listing progressive disclosure & redirects",
+          "status": "In Progress",
           "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
           "notes": "",
-          "history": [],
-          "comments": []
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Low",
+              "to": "Medium",
+              "ts": "2026-05-12T18:33:51.690Z"
+            },
+            {
+              "field": "priority",
+              "from": "High",
+              "to": "Low",
+              "ts": "2026-05-12T18:33:41.947Z"
+            },
+            {
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-12T18:33:39.759Z"
+            }
+          ]
         },
         {
-          "id": "_ya38w90",
-          "name": "Deliver final Figma specs for SERP redesign",
+          "id": "_vft5755",
+          "name": "Insurance eligibility checking inline chat",
           "status": "Not Started",
-          "priority": "High",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
+          "priority": "Low",
           "notes": "",
-          "history": [],
-          "comments": []
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:33:56.664Z"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "_577mqpu",
-      "color": "#d97706",
-      "open": true,
-      "title": "AI Chat Refinement & Insurance Collection",
-      "subtitle": "Natural language interaction and insurance slot filling in chat",
-      "sc": null,
-      "sd": 1,
-      "tasks": [
-        {
-          "id": "_yxxliah",
-          "name": "Iterate on refinement question copy",
-          "status": "In Progress",
-          "priority": "High",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_btnie5v",
-          "name": "Design insurance collection flow in chat",
-          "status": "In Progress",
-          "priority": "High",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_grcd5q8",
-          "name": "Map edge cases for insurance fallback states",
-          "status": "Not Started",
-          "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_3mq9hwa",
-          "name": "Prototype chat slot-filling in Figma",
-          "status": "Not Started",
-          "priority": "High",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_ssbgy64",
-          "name": "Review conversation flows with PM",
-          "status": "Done",
-          "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        }
-      ]
-    },
-    {
-      "id": "_fwhw7z0",
+      "id": "_ogw8p2n",
       "color": "#8b5cf6",
       "open": true,
-      "title": "AI Search Strategy & Branding",
+      "title": "Conversation Design & Branding",
       "subtitle": "Naming, design principles, and UX guidelines for AI search",
-      "sc": null,
-      "sd": 1,
+      "sc": "name",
+      "sd": -1,
       "tasks": [
         {
-          "id": "_psca994",
-          "name": "Finalize AI search feature naming and brand language",
+          "id": "_xpfu3oi",
+          "name": "Conversation design & tone of voice collaboration",
           "status": "In Progress",
-          "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_axvpwe4",
-          "name": "Document AI search design principles",
-          "status": "In Dev",
-          "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_kfmba34",
-          "name": "Create UX guidelines for AI interaction patterns",
-          "status": "Not Started",
           "priority": "Low",
-          "platforms": [
-            "All"
-          ],
+          "notes": "Develop working model between Anupam, Oliver, and I to co-collaborate on conversation design & experience",
           "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_yf1xtpk",
-          "name": "Share design principles with stakeholders",
-          "status": "Not Started",
-          "priority": "Low",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
+          "history": [
+            {
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-12T18:34:04.445Z"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "_obxh0gb",
+      "id": "_hr5jdj2",
       "color": "#ef4444",
       "open": true,
-      "title": "Data & Infrastructure",
-      "subtitle": "Snowflake setup, ZD-Data plugin, and analytics access",
-      "sc": null,
+      "title": "Miscellaneous Tasks",
+      "subtitle": "AI tooling",
+      "sc": "name",
       "sd": 1,
       "tasks": [
         {
-          "id": "_77nal78",
+          "id": "_wqeif1o",
           "name": "Complete Snowflake environment setup",
+          "status": "Done",
+          "priority": "Medium",
+          "notes": "",
+          "due": ""
+        },
+        {
+          "id": "_xoizult",
+          "name": "Snowflake MCP pilot",
           "status": "In Progress",
-          "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_nrixc7e",
-          "name": "Connect ZD-Data plugin for design metrics",
-          "status": "Not Started",
-          "priority": "Medium",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [],
-          "comments": []
-        },
-        {
-          "id": "_lkd6t4e",
-          "name": "Identify key AI search metrics to track",
-          "status": "Not Started",
           "priority": "Low",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
           "notes": "",
-          "history": [],
-          "comments": []
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:35:19.360Z"
+            },
+            {
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-12T18:35:15.973Z"
+            }
+          ]
+        },
+        {
+          "id": "_7ilic78",
+          "name": "AI tooling design team guidance & best practices",
+          "status": "In Progress",
+          "priority": "Low",
+          "notes": "",
+          "due": "",
+          "history": [
+            {
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-12T18:34:36.515Z"
+            },
+            {
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-12T18:34:33.295Z"
+            }
+          ]
         }
       ]
     }
   ],
   "columnOrder": [
     "name",
+    "platform",
     "status",
     "priority",
-    "platform",
     "due",
     "_act"
   ]
