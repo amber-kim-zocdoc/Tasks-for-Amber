@@ -1,0 +1,356 @@
+{
+  "areas": [
+    {
+      "id": "_4cxxpki",
+      "color": "#0071e3",
+      "open": true,
+      "title": "SERP & Chat UI",
+      "subtitle": "Scroll behavior, chat input, and doctor card spacing",
+      "sc": null,
+      "sd": 1,
+      "tasks": [
+        {
+          "id": "_whx8rjo",
+          "name": "Refine scroll behavior on AI SERP page",
+          "status": "In Progress",
+          "priority": "High",
+          "platforms": [
+            "Web"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_a8a69a9",
+          "name": "Update chat input design for natural language prompts",
+          "status": "In Progress",
+          "priority": "High",
+          "platforms": [
+            "Web"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_8fim1cc",
+          "name": "Adjust doctor card spacing and layout",
+          "status": "Done",
+          "priority": "High",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_6mh2ue8",
+          "name": "Audit carousel across devices",
+          "status": "QA",
+          "priority": "Medium",
+          "platforms": [
+            "Web",
+            "iOS",
+            "Android"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_shvlxnw",
+          "name": "Fix scroll container overflow on mobile web",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "Web"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "_nwydn06",
+      "color": "#30a46c",
+      "open": true,
+      "title": "AI Search Results Page Redesign",
+      "subtitle": "Carousels of cross-listed providers and new layout system",
+      "sc": null,
+      "sd": 1,
+      "tasks": [
+        {
+          "id": "_vrv0pez",
+          "name": "Design cross-listed provider carousel component",
+          "status": "In Progress",
+          "priority": "High",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_1aif12h",
+          "name": "Define carousel interaction patterns",
+          "status": "In Progress",
+          "priority": "High",
+          "platforms": [
+            "Web",
+            "iOS"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_34ax56p",
+          "name": "Explore layout options for multi-specialty SERP view",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_0dff6q9",
+          "name": "Validate design with engineering on feasibility",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_ya38w90",
+          "name": "Deliver final Figma specs for SERP redesign",
+          "status": "Not Started",
+          "priority": "High",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "_577mqpu",
+      "color": "#d97706",
+      "open": true,
+      "title": "AI Chat Refinement & Insurance Collection",
+      "subtitle": "Natural language interaction and insurance slot filling in chat",
+      "sc": null,
+      "sd": 1,
+      "tasks": [
+        {
+          "id": "_yxxliah",
+          "name": "Iterate on refinement question copy",
+          "status": "In Progress",
+          "priority": "High",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_btnie5v",
+          "name": "Design insurance collection flow in chat",
+          "status": "In Progress",
+          "priority": "High",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_grcd5q8",
+          "name": "Map edge cases for insurance fallback states",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_3mq9hwa",
+          "name": "Prototype chat slot-filling in Figma",
+          "status": "Not Started",
+          "priority": "High",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_ssbgy64",
+          "name": "Review conversation flows with PM",
+          "status": "Done",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "_fwhw7z0",
+      "color": "#8b5cf6",
+      "open": true,
+      "title": "AI Search Strategy & Branding",
+      "subtitle": "Naming, design principles, and UX guidelines for AI search",
+      "sc": null,
+      "sd": 1,
+      "tasks": [
+        {
+          "id": "_psca994",
+          "name": "Finalize AI search feature naming and brand language",
+          "status": "In Progress",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_axvpwe4",
+          "name": "Document AI search design principles",
+          "status": "In Dev",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_kfmba34",
+          "name": "Create UX guidelines for AI interaction patterns",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_yf1xtpk",
+          "name": "Share design principles with stakeholders",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "_obxh0gb",
+      "color": "#ef4444",
+      "open": true,
+      "title": "Data & Infrastructure",
+      "subtitle": "Snowflake setup, ZD-Data plugin, and analytics access",
+      "sc": null,
+      "sd": 1,
+      "tasks": [
+        {
+          "id": "_77nal78",
+          "name": "Complete Snowflake environment setup",
+          "status": "In Progress",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_nrixc7e",
+          "name": "Connect ZD-Data plugin for design metrics",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_lkd6t4e",
+          "name": "Identify key AI search metrics to track",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "columnOrder": [
+    "name",
+    "status",
+    "priority",
+    "platform",
+    "due",
+    "_act"
+  ]
+}
