@@ -267,6 +267,27 @@
           "notes": "Need to create annotations and ticket",
           "history": [],
           "comments": []
+        },
+        {
+          "id": "_pj0x593",
+          "name": "FE ticket organization",
+          "status": "In Progress",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_9siybim",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-13T00:45:30.969Z"
+            }
+          ],
+          "comments": []
         }
       ]
     },
@@ -498,26 +519,42 @@
           "id": "_6khg29c",
           "name": "Pause button in chat",
           "status": "Not Started",
-          "priority": "Medium",
+          "priority": "Low",
           "platforms": [
             "All"
           ],
           "due": "",
           "notes": "",
-          "history": [],
+          "history": [
+            {
+              "id": "_1rujzbm",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-13T00:44:02.491Z"
+            }
+          ],
           "comments": []
         },
         {
           "id": "_i7de9ix",
           "name": "Start new search & recent chats",
           "status": "Not Started",
-          "priority": "Medium",
+          "priority": "Low",
           "platforms": [
             "All"
           ],
           "due": "",
           "notes": "",
-          "history": [],
+          "history": [
+            {
+              "id": "_cwobgtq",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-13T00:44:04.962Z"
+            }
+          ],
           "comments": []
         }
       ]
