@@ -484,6 +484,43 @@
           ]
         }
       ]
+    },
+    {
+      "id": "_8e5xtvb",
+      "color": "#64748b",
+      "open": true,
+      "title": "Backlog",
+      "subtitle": "Click to edit subtitle",
+      "sc": "name",
+      "sd": -1,
+      "tasks": [
+        {
+          "id": "_6khg29c",
+          "name": "Pause button in chat",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        },
+        {
+          "id": "_i7de9ix",
+          "name": "Start new search & recent chats",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
     }
   ],
   "columnOrder": [
