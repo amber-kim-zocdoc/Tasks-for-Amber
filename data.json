@@ -5,7 +5,7 @@
       "color": "#0071e3",
       "open": true,
       "title": "Alpha Iterations",
-      "subtitle": "Rapid updates; QA; unblock eng",
+      "subtitle": "Rapid updates and QA",
       "sc": "status",
       "sd": 1,
       "tasks": [
@@ -413,6 +413,48 @@
               "ts": "2026-05-12T18:33:56.664Z"
             }
           ]
+        },
+        {
+          "id": "_l1qh7p0",
+          "name": "Provider experience",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_dowtgi4",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-13T00:59:32.877Z"
+            }
+          ],
+          "comments": []
+        },
+        {
+          "id": "_98qoabg",
+          "name": "Brand experience",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_f9hkulx",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-13T00:59:34.085Z"
+            }
+          ],
+          "comments": []
         }
       ]
     },
@@ -443,7 +485,7 @@
         },
         {
           "id": "_wekabue",
-          "name": "Market Intelligence / DAG updates",
+          "name": "Market Intelligence / DAG user journey mapping",
           "status": "Not Started",
           "priority": "Medium",
           "platforms": [
