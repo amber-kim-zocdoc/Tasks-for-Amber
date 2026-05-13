@@ -6,8 +6,8 @@
       "open": true,
       "title": "Alpha Iterations",
       "subtitle": "Rapid updates and QA",
-      "sc": "status",
-      "sd": 1,
+      "sc": "name",
+      "sd": -1,
       "tasks": [
         {
           "id": "_etztrpk",
