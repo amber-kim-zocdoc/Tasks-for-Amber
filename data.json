@@ -94,7 +94,7 @@
         {
           "id": "_v6goe3e",
           "name": "0 map state for availability filter",
-          "status": "In Progress",
+          "status": "In Dev",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -111,6 +111,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-12T19:23:58.416Z"
+            },
+            {
+              "id": "_1o0r5g6",
+              "field": "status",
+              "from": "In Progress",
+              "to": "In Dev",
+              "ts": "2026-05-13T21:11:33.338Z"
             }
           ],
           "platforms": [
@@ -153,7 +160,7 @@
         {
           "id": "_omoxye3",
           "name": "Test Anupam's internal Market Intelligence build",
-          "status": "Not Started",
+          "status": "In Progress",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -163,6 +170,13 @@
               "from": "Medium",
               "to": "High",
               "ts": "2026-05-12T18:31:50.184Z"
+            },
+            {
+              "id": "_kku1dpb",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-13T21:11:23.122Z"
             }
           ],
           "platform": "Web",
