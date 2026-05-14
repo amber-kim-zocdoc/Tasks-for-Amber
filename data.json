@@ -499,8 +499,8 @@
       "open": true,
       "title": "Conversation Design & Branding",
       "subtitle": "Naming, design principles, and UX guidelines for AI search",
-      "sc": "name",
-      "sd": -1,
+      "sc": "status",
+      "sd": 1,
       "tasks": [
         {
           "id": "_xpfu3oi",
