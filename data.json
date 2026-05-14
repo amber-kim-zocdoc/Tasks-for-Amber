@@ -6,8 +6,8 @@
       "open": true,
       "title": "Alpha Iterations",
       "subtitle": "Rapid updates and QA",
-      "sc": "name",
-      "sd": -1,
+      "sc": "status",
+      "sd": 1,
       "tasks": [
         {
           "id": "_etztrpk",
@@ -187,7 +187,7 @@
         {
           "id": "_dn3azmy",
           "name": "Refreshed doctor card snippets & design",
-          "status": "Not Started",
+          "status": "In Progress",
           "priority": "Medium",
           "notes": "",
           "due": "",
@@ -205,6 +205,13 @@
               "from": "High",
               "to": "Medium",
               "ts": "2026-05-12T19:24:12.327Z"
+            },
+            {
+              "id": "_59s6sk6",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-14T21:56:06.303Z"
             }
           ]
         },
@@ -252,7 +259,7 @@
         {
           "id": "_eitaabe",
           "name": "Chat scrolling behavior updates [apps]",
-          "status": "In Progress",
+          "status": "Not Started",
           "priority": "Medium",
           "notes": "Need to create ticket",
           "due": "",
@@ -262,6 +269,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-12T18:33:07.644Z"
+            },
+            {
+              "id": "_q5ys5am",
+              "field": "status",
+              "from": "In Progress",
+              "to": "Not Started",
+              "ts": "2026-05-14T21:56:15.927Z"
             }
           ],
           "platforms": [
@@ -285,7 +299,7 @@
         {
           "id": "_pj0x593",
           "name": "FE ticket organization",
-          "status": "In Progress",
+          "status": "Done",
           "priority": "Medium",
           "platforms": [
             "All"
@@ -299,6 +313,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-13T00:45:30.969Z"
+            },
+            {
+              "id": "_5u39thm",
+              "field": "status",
+              "from": "In Progress",
+              "to": "Done",
+              "ts": "2026-05-14T21:55:43.615Z"
             }
           ],
           "comments": []
