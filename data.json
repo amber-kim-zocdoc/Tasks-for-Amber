@@ -1,6 +1,95 @@
 {
   "areas": [
     {
+      "id": "_8e5xtvb",
+      "color": "#64748b",
+      "open": true,
+      "title": "Backlog",
+      "subtitle": "To-do's that's not on the radar yet",
+      "sc": "name",
+      "sd": -1,
+      "tasks": [
+        {
+          "id": "_6khg29c",
+          "name": "Pause button in chat",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_1rujzbm",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-13T00:44:02.491Z"
+            }
+          ],
+          "comments": []
+        },
+        {
+          "id": "_i7de9ix",
+          "name": "Start new search & recent chats",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_cwobgtq",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-13T00:44:04.962Z"
+            }
+          ],
+          "comments": []
+        },
+        {
+          "id": "_s0jci05",
+          "name": "Search bar placeholder examples - typewriter animation",
+          "status": "Not Started",
+          "priority": "Low",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_ym8acmc",
+              "field": "priority",
+              "from": "Medium",
+              "to": "Low",
+              "ts": "2026-05-15T15:04:28.310Z"
+            }
+          ],
+          "comments": []
+        },
+        {
+          "id": "_vhuwxln",
+          "name": "Enriched chat content per procedure/specialty",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [],
+          "comments": []
+        }
+      ]
+    },
+    {
       "id": "_iz5umsy",
       "color": "#0071e3",
       "open": true,
@@ -374,38 +463,6 @@
           ]
         },
         {
-          "id": "_jp0df7f",
-          "name": "Search bar placeholder examples - typewriter animation",
-          "status": "Not Started",
-          "priority": "Low",
-          "notes": "",
-          "due": "",
-          "history": [
-            {
-              "field": "priority",
-              "from": "Medium",
-              "to": "Low",
-              "ts": "2026-05-12T18:33:46.796Z"
-            }
-          ]
-        },
-        {
-          "id": "_n1g2eq4",
-          "name": "Enriched chat content per procedure/specialty",
-          "status": "Not Started",
-          "priority": "Low",
-          "notes": "",
-          "due": "",
-          "history": [
-            {
-              "field": "priority",
-              "from": "Medium",
-              "to": "Low",
-              "ts": "2026-05-12T18:33:58.115Z"
-            }
-          ]
-        },
-        {
           "id": "_5egffrv",
           "name": "X-listing progressive disclosure & redirects",
           "status": "In Progress",
@@ -593,59 +650,6 @@
               "ts": "2026-05-12T18:34:33.295Z"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "_8e5xtvb",
-      "color": "#64748b",
-      "open": true,
-      "title": "Backlog",
-      "subtitle": "To-do's that's not on the radar yet",
-      "sc": "name",
-      "sd": -1,
-      "tasks": [
-        {
-          "id": "_6khg29c",
-          "name": "Pause button in chat",
-          "status": "Not Started",
-          "priority": "Low",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [
-            {
-              "id": "_1rujzbm",
-              "field": "priority",
-              "from": "Medium",
-              "to": "Low",
-              "ts": "2026-05-13T00:44:02.491Z"
-            }
-          ],
-          "comments": []
-        },
-        {
-          "id": "_i7de9ix",
-          "name": "Start new search & recent chats",
-          "status": "Not Started",
-          "priority": "Low",
-          "platforms": [
-            "All"
-          ],
-          "due": "",
-          "notes": "",
-          "history": [
-            {
-              "id": "_cwobgtq",
-              "field": "priority",
-              "from": "Medium",
-              "to": "Low",
-              "ts": "2026-05-13T00:44:04.962Z"
-            }
-          ],
-          "comments": []
         }
       ]
     }
