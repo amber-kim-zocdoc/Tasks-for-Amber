@@ -427,7 +427,7 @@
       "color": "#30a46c",
       "open": true,
       "title": "Vision Explorations",
-      "subtitle": "H2 & beyond design ideation",
+      "subtitle": "H2 & beyond design exploration",
       "sc": "status",
       "sd": 1,
       "tasks": [
@@ -590,7 +590,7 @@
       "color": "#8b5cf6",
       "open": true,
       "title": "Conversation Design & Branding",
-      "subtitle": "Naming, design principles, and UX guidelines for AI search",
+      "subtitle": "Chat experience improvements; copy",
       "sc": "status",
       "sd": 1,
       "tasks": [
@@ -630,7 +630,7 @@
       "color": "#ef4444",
       "open": true,
       "title": "Miscellaneous Tasks",
-      "subtitle": "AI tooling",
+      "subtitle": "AI tooling; process",
       "sc": "name",
       "sd": 1,
       "tasks": [
