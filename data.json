@@ -18,7 +18,7 @@
             "All"
           ],
           "due": "",
-          "notes": "",
+          "notes": "Allow users to pause/stop a chat response if it takes too long or is irrelevant.",
           "history": [
             {
               "id": "_1rujzbm",
@@ -68,7 +68,7 @@
           ],
           "due": "",
           "quicknote": "",
-          "notes": "",
+          "notes": "https://www.npmjs.com/package/react-native-type-animation\nhttps://joshpuckett.me/dialkit",
           "history": [
             {
               "id": "_ym8acmc",
@@ -90,7 +90,7 @@
           ],
           "due": "",
           "quicknote": "",
-          "notes": "",
+          "notes": "Create chat experiences with content that supports the user's query eg. User searches for GLP-1, and the chat can guide users through the types of GLP-1s available, potential insurance benefits for the user to look into, and general education about GLP-1s",
           "history": [],
           "comments": []
         }
@@ -456,10 +456,10 @@
         },
         {
           "id": "_ygj57a4",
-          "name": "Tiered X-listing system - High & low supply, SERP layouts & carousels",
+          "name": "High & low supply chat & SERP experiences",
           "status": "On Hold",
           "priority": "Medium",
-          "notes": "",
+          "notes": "Progressive disclosure of most relevant to least relevant results; redirect tactics / 'see more'",
           "due": "",
           "history": [
             {
@@ -485,7 +485,7 @@
         },
         {
           "id": "_5egffrv",
-          "name": "X-listing progressive disclosure & redirects",
+          "name": "SERP layouts for cross-listing scenarios",
           "status": "On Hold",
           "priority": "Medium",
           "notes": "",
@@ -521,7 +521,7 @@
         {
           "id": "_vft5755",
           "name": "Insurance eligibility checking inline chat",
-          "status": "Not Started",
+          "status": "On Hold",
           "priority": "Low",
           "notes": "",
           "due": "",
@@ -531,12 +531,19 @@
               "from": "Medium",
               "to": "Low",
               "ts": "2026-05-12T18:33:56.664Z"
+            },
+            {
+              "id": "_g7nh70c",
+              "field": "status",
+              "from": "Not Started",
+              "to": "On Hold",
+              "ts": "2026-05-15T17:45:47.839Z"
             }
           ]
         },
         {
           "id": "_l1qh7p0",
-          "name": "Provider experience",
+          "name": "Provider AI experience",
           "status": "Not Started",
           "priority": "Low",
           "platforms": [
@@ -557,7 +564,7 @@
         },
         {
           "id": "_98qoabg",
-          "name": "Brand experience",
+          "name": "Brand AI experience",
           "status": "Not Started",
           "priority": "Low",
           "platforms": [
