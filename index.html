@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Amber's Workload Dashboard</title>
+<!-- FULL REWRITE v7 -->
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -107,6 +109,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
 .s-qa{background:rgba(236,72,153,.12);color:#db2777}
 .s-bl{background:rgba(239,68,68,.1);color:#ef4444}
 .s-dn{background:rgba(48,164,108,.12);color:#30a46c}
+.s-oh{background:rgba(245,158,11,.13);color:#92400e}
+.qnote-inp{border:none;outline:none;font-size:11.5px;font-family:inherit;background:transparent;width:100%;padding:2px 6px;border-radius:5px;color:#6e6e73;transition:background .15s}
+.qnote-inp:hover{background:rgba(0,0,0,.04)}
+.qnote-inp:focus{background:rgba(0,113,227,.05);box-shadow:0 0 0 2px rgba(0,113,227,.18);color:#1d1d1f}
+.area-drag-hdl{cursor:grab;color:#c7c7cc;font-size:15px;padding:0 6px 0 0;user-select:none;flex-shrink:0;line-height:1}
+.area-drag-hdl:hover{color:#86868b}
+.area-card.area-drag-over{outline:2px solid #0071e3;outline-offset:-2px;background:rgba(0,113,227,.02)}
 .pbadge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;cursor:pointer;padding:3px 9px;border-radius:99px;white-space:nowrap;transition:opacity .15s}
 .pbadge:hover{opacity:.75}
 .p-hi{background:rgba(239,68,68,.1);color:#ef4444}
@@ -250,8 +259,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgrou
       <div class="sync-dot" id="sync-dot" style="background:#ef4444"></div>
       <span id="sync-txt">Not connected</span>
     </div>
-    <button class="btn btn-gray" onclick="expandAll()">Expand All</button>
-    <button class="btn btn-gray" onclick="collapseAll()">Collapse All</button>
     <button class="btn btn-outline" onclick="openRestoreModal()">↩ Restore</button>
     <button class="btn btn-gray" onclick="openTokenModal()" title="GitHub settings">⚙️</button>
     <button class="btn btn-green" id="save-btn" onclick="doSave()">💾 Save</button>
@@ -340,19 +347,20 @@ var LOCAL_KEY   = 'amber_dashboard_v3';
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 var COLORS     = ['#0071e3','#30a46c','#d97706','#8b5cf6','#ef4444','#06b6d4','#ec4899','#64748b'];
-var STATUSES   = [{k:'Not Started',cls:'s-ns'},{k:'In Progress',cls:'s-ip'},{k:'In Dev',cls:'s-id'},{k:'QA',cls:'s-qa'},{k:'Blocked',cls:'s-bl'},{k:'Done',cls:'s-dn'}];
+var STATUSES   = [{k:'Not Started',cls:'s-ns'},{k:'In Progress',cls:'s-ip'},{k:'In Dev',cls:'s-id'},{k:'QA',cls:'s-qa'},{k:'Blocked',cls:'s-bl'},{k:'On Hold',cls:'s-oh'},{k:'Done',cls:'s-dn'}];
 var PRIORITIES = [{k:'High',icon:'↑',cls:'p-hi'},{k:'Medium',icon:'→',cls:'p-md'},{k:'Low',icon:'↓',cls:'p-lo'}];
 var PLATFORMS  = ['All','Web','iOS','Android'];
 var COL_DEFS   = [
-  {key:'name',    label:'Task',    sortable:true, w:''},
-  {key:'status',  label:'Status',  sortable:true, w:'125px'},
-  {key:'priority',label:'Priority',sortable:true, w:'105px'},
-  {key:'platform',label:'Platform',sortable:false,w:'140px'},
-  {key:'due',     label:'Due Date',sortable:true, w:'125px'},
-  {key:'_act',    label:'',        sortable:false,w:'36px'}
+  {key:'name',     label:'Task',     sortable:true, w:''},
+  {key:'status',   label:'Status',   sortable:true, w:'125px'},
+  {key:'priority', label:'Priority', sortable:true, w:'105px'},
+  {key:'quicknote',label:'Note',     sortable:false,w:'160px'},
+  {key:'platform', label:'Platform', sortable:false,w:'140px'},
+  {key:'due',      label:'Due Date', sortable:true, w:'125px'},
+  {key:'_act',     label:'',         sortable:false,w:'36px'}
 ];
-var DEFAULT_COL_ORDER = ['name','status','priority','platform','due','_act'];
-var SORT_S = {'Blocked':0,'In Progress':1,'In Dev':2,'QA':3,'Not Started':4,'Done':5};
+var DEFAULT_COL_ORDER = ['name','status','priority','quicknote','platform','due','_act'];
+var SORT_S = {'Blocked':0,'In Progress':1,'In Dev':2,'QA':3,'Not Started':4,'On Hold':5,'Done':6};
 var SORT_P = {'High':0,'Medium':1,'Low':2};
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -510,8 +518,8 @@ function posDD(dd,anchor){ var r=anchor.getBoundingClientRect(); dd.style.top=(r
 function showDD(anchor,items){ var dd=document.getElementById('dd'); dd.innerHTML=''; items.forEach(function(item){ var div=document.createElement('div'); div.className='dd-item'; div.innerHTML=item.html; div.onclick=function(e){ e.stopPropagation(); item.fn(); dd.classList.remove('open'); }; dd.appendChild(div); }); posDD(dd,anchor); dd.classList.add('open'); }
 
 // ── Default data ──────────────────────────────────────────────────────────────
-function mkTask(name,status,priority,platforms){ return {id:uid(),name:name,status:status,priority:priority,platforms:platforms,due:'',notes:'',history:[],comments:[]}; }
-function mkArea(color,title,sub,tasks){ return {id:uid(),color:color,open:true,title:title,subtitle:sub,sc:null,sd:1,tasks:tasks}; }
+function mkTask(name,status,priority,platforms){ return {id:uid(),name:name,status:status,priority:priority,platforms:platforms,due:'',quicknote:'',notes:'',history:[],comments:[]}; }
+function mkArea(color,title,sub,tasks){ return {id:uid(),color:color,open:true,title:title,subtitle:sub,sc:'status',sd:1,tasks:tasks}; }
 function makeDefault(){
   return [
     mkArea(COLORS[0],'SERP & Chat UI','Scroll behavior, chat input, and doctor card spacing',[
@@ -572,6 +580,7 @@ function render(){
   areas.forEach(function(a){ c.appendChild(buildCard(a)); });
   areas.forEach(function(a){ buildHeaders(a); renderBody(a); });
   updateStats();
+  initAreaDrag();
   if(curTaskId) renderPanel(curAreaId,curTaskId);
 }
 
@@ -583,6 +592,7 @@ function buildCard(a){
   card.innerHTML=
     '<div class="area-hdr" onclick="toggleArea(\''+a.id+'\')">' +
       '<div class="area-hdr-l">' +
+        '<span class="area-drag-hdl" onclick="event.stopPropagation()" title="Drag to reorder">⠿</span>' +
         '<div class="dot" id="dot-'+a.id+'" style="background:'+a.color+'"></div>' +
         '<div>' +
           '<input class="area-title-inp" value="'+esc(a.title)+'" onclick="event.stopPropagation()" onchange="areaTitle(\''+a.id+'\',this.value)"/>' +
@@ -634,6 +644,7 @@ function taskRowHTML(aId,t){
   cells['name']     = '<div class="task-cell"><div class="chkbox'+(isDone?' done':'')+'" onclick="event.stopPropagation();toggleDone(\''+aId+'\',\''+t.id+'\')"></div><div class="task-name-wrap"><span class="task-name-span'+(isDone?' done-txt':'')+'">'+esc(t.name)+'</span><button class="pencil-btn" onclick="event.stopPropagation();startEditName(\''+aId+'\',\''+t.id+'\',this)" title="Edit name">✏️</button></div></div>';
   cells['status']   = '<span class="sbadge '+sCls(t.status)+'" onclick="event.stopPropagation();statusDD(\''+aId+'\',\''+t.id+'\',this)">'+esc(t.status)+'</span>';
   cells['priority'] = '<span class="pbadge '+pCls(t.priority)+'" onclick="event.stopPropagation();priorityDD(\''+aId+'\',\''+t.id+'\',this)">'+pIcon(t.priority)+' '+esc(t.priority)+'</span>';
+  cells['quicknote'] = '<input class="qnote-inp" placeholder="Quick note…" value="'+esc(t.quicknote||'')+'" onclick="event.stopPropagation()" onchange="event.stopPropagation();t.quicknote=this.value;setField(\''+aId+'\',\''+t.id+'\',\'quicknote\',this.value,false)"/>';
   cells['platform'] = '<div class="plat-multi" onclick="event.stopPropagation();platformDD(\''+aId+'\',\''+t.id+'\',this)">'+platBadges+'</div>';
   cells['due']      = '<input type="date" class="due-inp '+dc+'" value="'+esc(t.due||'')+'" onclick="event.stopPropagation()" onchange="event.stopPropagation();setField(\''+aId+'\',\''+t.id+'\',\'due\',this.value,true);refreshRow(\''+aId+'\',\''+t.id+'\')">';
   cells['_act']     = '<div class="row-acts"><button class="icon-btn del" onclick="event.stopPropagation();delTask(\''+aId+'\',\''+t.id+'\')">✕</button></div>';
@@ -703,6 +714,44 @@ function initRowDrag(a){
       var newIdx=a.tasks.findIndex(function(t){return t.id===toId;});
       a.tasks.splice(before?newIdx:newIdx+1,0,task);
       renderBody(a);
+    });
+  });
+}
+
+// ── Area drag to reorder ──────────────────────────────────────────────────────
+var areaDragId    = null;
+var areaHandleHeld = false;
+document.addEventListener('mouseup',function(){ areaHandleHeld=false; });
+function initAreaDrag(){
+  areas.forEach(function(a){
+    var card=document.getElementById('ac-'+a.id); if(!card) return;
+    var hdl=card.querySelector('.area-drag-hdl'); if(hdl){
+      hdl.addEventListener('mousedown',function(e){ e.stopPropagation(); areaHandleHeld=true; });
+    }
+    card.draggable=true;
+    card.addEventListener('dragstart',function(e){
+      if(!areaHandleHeld||rowDragId||colDragKey){ e.preventDefault(); return; }
+      areaDragId=a.id;
+      setTimeout(function(){ card.style.opacity='.45'; },0);
+      e.dataTransfer.effectAllowed='move';
+    });
+    card.addEventListener('dragend',function(){
+      card.style.opacity=''; areaDragId=null; areaHandleHeld=false;
+      document.querySelectorAll('.area-drag-over').forEach(function(el){ el.classList.remove('area-drag-over'); });
+    });
+    card.addEventListener('dragover',function(e){
+      if(!areaDragId||areaDragId===a.id) return;
+      e.preventDefault(); e.stopPropagation();
+      document.querySelectorAll('.area-drag-over').forEach(function(el){ el.classList.remove('area-drag-over'); });
+      card.classList.add('area-drag-over');
+    });
+    card.addEventListener('dragleave',function(e){ if(!card.contains(e.relatedTarget)) card.classList.remove('area-drag-over'); });
+    card.addEventListener('drop',function(e){
+      e.preventDefault(); e.stopPropagation(); card.classList.remove('area-drag-over');
+      if(!areaDragId||areaDragId===a.id) return;
+      var fi=areas.findIndex(function(x){return x.id===areaDragId;}), ti=areas.findIndex(function(x){return x.id===a.id;});
+      if(fi<0||ti<0) return;
+      var moved=areas.splice(fi,1)[0]; areas.splice(ti,0,moved); areaDragId=null; render();
     });
   });
 }
@@ -893,11 +942,21 @@ function renderPanel(aId,tId,editNameMode){
 
   var body=document.getElementById('panel-body'); body.innerHTML='';
 
-  // Notes
+  // Quick Note (synced with inline column)
+  var qns=document.createElement('div'); qns.className='panel-sec';
+  qns.innerHTML='<div class="panel-sec-title">Quick Note</div>';
+  var qni=document.createElement('input'); qni.type='text'; qni.className='panel-notes';
+  qni.style.cssText='min-height:unset;height:36px;resize:none;padding:8px 12px';
+  qni.placeholder='Short flag or update…'; qni.value=t.quicknote||'';
+  qni.onchange=function(){ t.quicknote=this.value; refreshRow(aId,tId); };
+  qns.appendChild(qni); body.appendChild(qns);
+
+  // Detailed Notes
   var ns=document.createElement('div'); ns.className='panel-sec';
-  ns.innerHTML='<div class="panel-sec-title">Notes</div>';
+  ns.innerHTML='<div class="panel-sec-title">Detailed Notes</div>';
   var ta=document.createElement('textarea'); ta.className='panel-notes';
-  ta.placeholder='Add notes here…'; ta.value=t.notes||'';
+  ta.placeholder='Add detailed notes, context, or links…'; ta.value=t.notes||'';
+  ta.style.minHeight='120px';
   ta.onchange=function(){ t.notes=this.value; };
   ns.appendChild(ta); body.appendChild(ns);
 
