@@ -34,7 +34,7 @@
           "id": "_i7de9ix",
           "name": "Start new search & recent chats",
           "status": "Not Started",
-          "priority": "Low",
+          "priority": "Medium",
           "platforms": [
             "All"
           ],
@@ -47,6 +47,13 @@
               "from": "Medium",
               "to": "Low",
               "ts": "2026-05-13T00:44:04.962Z"
+            },
+            {
+              "id": "_sfbax3s",
+              "field": "priority",
+              "from": "Low",
+              "to": "Medium",
+              "ts": "2026-05-15T15:04:58.658Z"
             }
           ],
           "comments": []
@@ -427,7 +434,7 @@
         {
           "id": "_lkk408t",
           "name": "mWeb chat drawer - smart intercepts",
-          "status": "In Progress",
+          "status": "On Hold",
           "priority": "Low",
           "notes": "",
           "due": "",
@@ -437,13 +444,20 @@
               "from": "High",
               "to": "Low",
               "ts": "2026-05-12T18:33:49.336Z"
+            },
+            {
+              "id": "_auo070h",
+              "field": "status",
+              "from": "In Progress",
+              "to": "On Hold",
+              "ts": "2026-05-15T15:05:27.827Z"
             }
           ]
         },
         {
           "id": "_ygj57a4",
           "name": "Tiered X-listing system - High & low supply, SERP layouts & carousels",
-          "status": "In Progress",
+          "status": "On Hold",
           "priority": "Medium",
           "notes": "",
           "due": "",
@@ -459,13 +473,20 @@
               "from": "High",
               "to": "Low",
               "ts": "2026-05-12T18:33:43.838Z"
+            },
+            {
+              "id": "_uypwz3a",
+              "field": "status",
+              "from": "In Progress",
+              "to": "On Hold",
+              "ts": "2026-05-15T15:05:29.020Z"
             }
           ]
         },
         {
           "id": "_5egffrv",
           "name": "X-listing progressive disclosure & redirects",
-          "status": "In Progress",
+          "status": "On Hold",
           "priority": "Medium",
           "notes": "",
           "due": "",
@@ -487,6 +508,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-12T18:33:39.759Z"
+            },
+            {
+              "id": "_x4avhwd",
+              "field": "status",
+              "from": "In Progress",
+              "to": "On Hold",
+              "ts": "2026-05-15T15:05:30.346Z"
             }
           ]
         },
@@ -610,7 +638,7 @@
         {
           "id": "_xoizult",
           "name": "Snowflake MCP pilot",
-          "status": "In Progress",
+          "status": "Done",
           "priority": "Low",
           "notes": "",
           "due": "",
@@ -626,6 +654,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-12T18:35:15.973Z"
+            },
+            {
+              "id": "_2ua7fbm",
+              "field": "status",
+              "from": "In Progress",
+              "to": "Done",
+              "ts": "2026-05-15T15:05:37.942Z"
             }
           ]
         },
