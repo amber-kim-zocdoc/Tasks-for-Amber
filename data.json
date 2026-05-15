@@ -6,7 +6,7 @@
       "open": true,
       "title": "Backlog",
       "subtitle": "To-do's that's not on the radar yet",
-      "sc": "name",
+      "sc": "status",
       "sd": -1,
       "tasks": [
         {
