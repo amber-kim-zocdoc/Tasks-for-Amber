@@ -699,6 +699,20 @@
               "ts": "2026-05-12T18:34:33.295Z"
             }
           ]
+        },
+        {
+          "id": "_rjr4bky",
+          "name": "SPO ad design - credentials",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [],
+          "comments": []
         }
       ]
     }
