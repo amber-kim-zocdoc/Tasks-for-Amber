@@ -130,6 +130,14 @@
           "platform": "Web",
           "platforms": [
             "Web"
+          ],
+          "comments": [
+            {
+              "id": "_ocx3eib",
+              "author": "Amber Kim",
+              "text": "Follow-up ticket was created for deferred requirements - Amber to create Claude prototypes for design references",
+              "ts": "2026-05-27T13:54:10.854Z"
+            }
           ]
         },
         {
@@ -337,6 +345,14 @@
               "to": "In Progress",
               "ts": "2026-05-14T21:56:06.303Z"
             }
+          ],
+          "comments": [
+            {
+              "id": "_tlw0p1j",
+              "author": "Amber Kim",
+              "text": "I need to come up with a solution for how to handle both review snippets and bios.",
+              "ts": "2026-05-27T13:55:01.321Z"
+            }
           ]
         },
         {
@@ -450,7 +466,7 @@
         },
         {
           "id": "_vavsyyc",
-          "name": "Autocomplete updates",
+          "name": "PPS autocomplete updates",
           "status": "QA",
           "priority": "Medium",
           "platforms": [
@@ -469,6 +485,35 @@
             }
           ],
           "comments": []
+        },
+        {
+          "id": "_4urys7n",
+          "name": "Chat UI updates",
+          "status": "In Dev",
+          "priority": "Medium",
+          "platforms": [
+            "Web"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_fw9uc2u",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Dev",
+              "ts": "2026-05-27T13:53:52.924Z"
+            }
+          ],
+          "comments": [
+            {
+              "id": "_ot8lz7q",
+              "author": "Amber Kim",
+              "text": "Follow-up ticket was created for deferred requirements - Amber to create Claude prototypes for design references",
+              "ts": "2026-05-27T13:53:39.735Z"
+            }
+          ]
         }
       ]
     },
