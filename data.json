@@ -3,7 +3,7 @@
     {
       "id": "_8e5xtvb",
       "color": "#64748b",
-      "open": true,
+      "open": false,
       "title": "Backlog",
       "subtitle": "To-do's that's not on the radar yet",
       "sc": "status",
@@ -135,7 +135,7 @@
         {
           "id": "_8b76udb",
           "name": "Refinement chips carousel auto-scrolling and hover buttons [web]",
-          "status": "QA",
+          "status": "Done",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -145,6 +145,13 @@
               "from": "In Progress",
               "to": "QA",
               "ts": "2026-05-12T18:32:15.410Z"
+            },
+            {
+              "id": "_g8ka2ph",
+              "field": "status",
+              "from": "QA",
+              "to": "Done",
+              "ts": "2026-05-27T13:50:20.489Z"
             }
           ],
           "platform": "Web",
@@ -171,7 +178,7 @@
         {
           "id": "_mbnz9do",
           "name": "Search bar & entry points UI updates",
-          "status": "QA",
+          "status": "Done",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -187,6 +194,13 @@
               "from": "Medium",
               "to": "High",
               "ts": "2026-05-12T18:32:03.283Z"
+            },
+            {
+              "id": "_u78m7gi",
+              "field": "status",
+              "from": "QA",
+              "to": "Done",
+              "ts": "2026-05-27T13:50:35.256Z"
             }
           ],
           "platform": "Web",
@@ -231,7 +245,7 @@
         {
           "id": "_2g4nlkv",
           "name": "Voice dictation & insurance intercept [web]",
-          "status": "QA",
+          "status": "Done",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -253,6 +267,13 @@
               "from": "Not Started",
               "to": "In Dev",
               "ts": "2026-05-12T18:31:13.275Z"
+            },
+            {
+              "id": "_ltkeoft",
+              "field": "status",
+              "from": "QA",
+              "to": "Done",
+              "ts": "2026-05-27T13:50:38.817Z"
             }
           ],
           "platform": "Web",
@@ -426,6 +447,28 @@
             }
           ],
           "comments": []
+        },
+        {
+          "id": "_vavsyyc",
+          "name": "Autocomplete updates",
+          "status": "QA",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_dnv55id",
+              "field": "status",
+              "from": "Not Started",
+              "to": "QA",
+              "ts": "2026-05-27T13:51:02.275Z"
+            }
+          ],
+          "comments": []
         }
       ]
     },
@@ -464,7 +507,7 @@
         {
           "id": "_ygj57a4",
           "name": "High & low supply chat & SERP experiences",
-          "status": "On Hold",
+          "status": "In Progress",
           "priority": "Medium",
           "notes": "Progressive disclosure of most relevant to least relevant results; redirect tactics / 'see more'",
           "due": "",
@@ -487,13 +530,20 @@
               "from": "In Progress",
               "to": "On Hold",
               "ts": "2026-05-15T15:05:29.020Z"
+            },
+            {
+              "id": "_7t31j1k",
+              "field": "status",
+              "from": "On Hold",
+              "to": "In Progress",
+              "ts": "2026-05-27T13:51:28.513Z"
             }
           ]
         },
         {
           "id": "_5egffrv",
           "name": "SERP layouts for cross-listing scenarios",
-          "status": "On Hold",
+          "status": "In Progress",
           "priority": "Medium",
           "notes": "",
           "due": "",
@@ -522,6 +572,13 @@
               "from": "In Progress",
               "to": "On Hold",
               "ts": "2026-05-15T15:05:30.346Z"
+            },
+            {
+              "id": "_fcpa9ow",
+              "field": "status",
+              "from": "On Hold",
+              "to": "In Progress",
+              "ts": "2026-05-27T13:51:20.312Z"
             }
           ]
         },
@@ -638,7 +695,7 @@
       "open": true,
       "title": "Miscellaneous Tasks",
       "subtitle": "AI tooling; process",
-      "sc": "name",
+      "sc": "status",
       "sd": 1,
       "tasks": [
         {
@@ -703,7 +760,7 @@
         {
           "id": "_rjr4bky",
           "name": "SPO ad design - credentials",
-          "status": "Not Started",
+          "status": "In Progress",
           "priority": "Medium",
           "platforms": [
             "All"
@@ -711,7 +768,15 @@
           "due": "",
           "quicknote": "",
           "notes": "",
-          "history": [],
+          "history": [
+            {
+              "id": "_wp2irqp",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-05-27T13:51:43.083Z"
+            }
+          ],
           "comments": []
         }
       ]
