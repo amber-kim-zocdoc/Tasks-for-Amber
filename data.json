@@ -805,7 +805,7 @@
         {
           "id": "_rjr4bky",
           "name": "SPO ad design - credentials",
-          "status": "In Progress",
+          "status": "In Dev",
           "priority": "Medium",
           "platforms": [
             "All"
@@ -820,6 +820,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-27T13:51:43.083Z"
+            },
+            {
+              "id": "_qim7a1n",
+              "field": "status",
+              "from": "In Progress",
+              "to": "In Dev",
+              "ts": "2026-05-28T15:14:00.713Z"
             }
           ],
           "comments": []
