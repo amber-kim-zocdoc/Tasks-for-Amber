@@ -219,7 +219,7 @@
         {
           "id": "_v6goe3e",
           "name": "0 map state for availability filter",
-          "status": "In Dev",
+          "status": "Done",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -243,6 +243,13 @@
               "from": "In Progress",
               "to": "In Dev",
               "ts": "2026-05-13T21:11:33.338Z"
+            },
+            {
+              "id": "_8nfl7pm",
+              "field": "status",
+              "from": "In Dev",
+              "to": "Done",
+              "ts": "2026-05-28T15:14:27.192Z"
             }
           ],
           "platforms": [
@@ -292,7 +299,7 @@
         {
           "id": "_omoxye3",
           "name": "Test Anupam's internal Market Intelligence build",
-          "status": "In Progress",
+          "status": "Done",
           "priority": "High",
           "notes": "",
           "due": "",
@@ -309,6 +316,13 @@
               "from": "Not Started",
               "to": "In Progress",
               "ts": "2026-05-13T21:11:23.122Z"
+            },
+            {
+              "id": "_1vg4jc5",
+              "field": "status",
+              "from": "In Progress",
+              "to": "Done",
+              "ts": "2026-05-28T15:14:18.970Z"
             }
           ],
           "platform": "Web",
@@ -514,6 +528,20 @@
               "ts": "2026-05-27T13:53:39.735Z"
             }
           ]
+        },
+        {
+          "id": "_zy8wrwx",
+          "name": "Availability filter QA [Android]",
+          "status": "Not Started",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [],
+          "comments": []
         }
       ]
     },
