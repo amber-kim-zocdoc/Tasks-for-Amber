@@ -503,7 +503,7 @@
         {
           "id": "_4urys7n",
           "name": "Chat UI updates",
-          "status": "In Dev",
+          "status": "QA",
           "priority": "Medium",
           "platforms": [
             "Web"
@@ -518,6 +518,13 @@
               "from": "Not Started",
               "to": "In Dev",
               "ts": "2026-05-27T13:53:52.924Z"
+            },
+            {
+              "id": "_gr3h7zr",
+              "field": "status",
+              "from": "In Dev",
+              "to": "QA",
+              "ts": "2026-06-01T14:44:04.630Z"
             }
           ],
           "comments": [
@@ -758,6 +765,28 @@
           "due": "",
           "notes": "Map out ideal journeys and experiences when Market Intelligence is applied to DAGs",
           "history": [],
+          "comments": []
+        },
+        {
+          "id": "_fu4x7d7",
+          "name": "Onboard Jon",
+          "status": "In Progress",
+          "priority": "Medium",
+          "platforms": [
+            "All"
+          ],
+          "due": "",
+          "quicknote": "",
+          "notes": "",
+          "history": [
+            {
+              "id": "_eklyz64",
+              "field": "status",
+              "from": "Not Started",
+              "to": "In Progress",
+              "ts": "2026-06-01T14:44:35.341Z"
+            }
+          ],
           "comments": []
         }
       ]
